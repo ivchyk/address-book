@@ -7,15 +7,22 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 
 import { NotificationService } from "./_services/notification.service";
+import { AppRoutingModule } from './app-routing.module';
+
+import { AddressListComponent }  from  "./address-list/address-list.component";
+import { PushRecordComponent } from "./push-record/push-record.component";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AddressListComponent,
+    PushRecordComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    AppRoutingModule
   ],
   providers: [
     NotificationService

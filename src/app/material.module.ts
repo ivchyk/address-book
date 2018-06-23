@@ -2,7 +2,6 @@
  * Created by volodymyr.ivchyk on 6/23/18.
  */
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { MatButtonModule, MatToolbarModule } from '@angular/material';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
