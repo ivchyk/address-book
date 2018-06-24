@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -14,15 +14,23 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AddressComponent } from "./human/address.component";
 import { AddressListComponent }  from  "./human/address-list/address-list.component";
-import { PushRecordComponent } from "./push-record/push-record.component";
+import { PushRecordComponent } from "./human/push-record/push-record.component";
 import { HumanService } from "./_services/human.service";
+import { Error404Component } from './error/error404.component';
+import { AddressDetailResolver } from "./_services/address-detail-resolver.service"
+import { AddressRouteActivator } from "./_services/address-route-activator.service"
+import { AddressDetailComponent } from "./human/address-detail/address-detail.component"
+import { AddressStartComponent } from "./human/address-start.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     AddressComponent,
     AddressListComponent,
-    PushRecordComponent
+    PushRecordComponent,
+    Error404Component,
+    AddressDetailComponent,
+    AddressStartComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +44,9 @@ import { HumanService } from "./_services/human.service";
   ],
   providers: [
     NotificationService,
-    HumanService
+    HumanService,
+    AddressDetailResolver,
+    AddressRouteActivator
   ],
   bootstrap: [AppComponent]
 })

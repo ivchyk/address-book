@@ -2,8 +2,8 @@
   <mat-toolbar-row>
     <span>Address Book</span>
     <span class="example-spacer"></span>
-      <button [routerLink]="['/address']" routerLinkActive="active"  mat-button>List</button>
-      <button [routerLink]="['/push-record']" routerLinkActive="active"    mat-button>Push Record</button>
+      <button [routerLink]="['/address']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"  mat-button>List</button>
+      <button [routerLink]="['/address/push-record']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"    mat-button>Push Record</button>
   </mat-toolbar-row>
 </mat-toolbar>
   <router-outlet></router-outlet>

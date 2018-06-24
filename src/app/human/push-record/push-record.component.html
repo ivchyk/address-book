@@ -1,0 +1,29 @@
+<div>
+  <form #formHuman="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-submit">
+      <button type="submit" mat-raised-button color="primary"[disabled]="formHuman.invalid">Save</button>
+    </div>
+    <div class="form-container">
+      <mat-form-field>
+        <input  #firstNameControl="ngModel" matInput type="text"  placeholder="firstName"
+                [(ngModel)]="firstName" required   name="firstName" >
+      </mat-form-field>
+      <mat-form-field >
+        <input  #lastNameControl="ngModel" matInput type="text"  placeholder="lastName"
+                [(ngModel)]="lastName" required   name="lastName" >
+      </mat-form-field>
+
+      <mat-form-field >
+        <input  #emailControl="ngModel" matInput type="text"  placeholder="email"
+                [(ngModel)]="email" required   name="email" >
+      </mat-form-field>
+
+      <mat-form-field >
+        <input  #birthdayControl="ngModel" matInput type="text"  placeholder="birthday"
+                [(ngModel)]="birthday" required   name="birthday" >
+      </mat-form-field>
+    </div>
+  </form>
+</div>
+
+
