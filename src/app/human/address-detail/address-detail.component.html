@@ -7,24 +7,37 @@
         <mat-form-field>
           <input  #humanControl="ngModel" matInput type="number" min="1"  placeholder="human id"
                   [ngModel]="human.humanId" required readonly  name="humanId" >
+
         </mat-form-field>
         <mat-form-field>
           <input  #firstNameControl="ngModel" matInput type="text"  placeholder="firstName"
-                  [(ngModel)]="human.attributes.firstName" required maxlength="255"  name="firstName" >
+                  [(ngModel)]="human.attributes.firstName" required  maxlength="255"  name="firstName" >
+          <mat-error *ngIf="firstNameControl.errors">
+            <show-errors [control]="firstNameControl"></show-errors>
+          </mat-error>
         </mat-form-field>
         <mat-form-field >
           <input  #lastNameControl="ngModel" matInput type="text"  placeholder="lastName"
                   [(ngModel)]="human.attributes.lastName" required maxlength="255"  name="lastName" >
+          <mat-error *ngIf="lastNameControl.errors">
+            <show-errors [control]="lastNameControl"></show-errors>
+          </mat-error>
         </mat-form-field>
 
         <mat-form-field >
           <input  #emailControl="ngModel" matInput type="email"  placeholder="email"
-                  [(ngModel)]="human.attributes.email" required   name="email" >
+                  [(ngModel)]="human.attributes.email" required email  name="email" >
+          <mat-error *ngIf="emailControl.errors">
+            <show-errors [control]="emailControl"></show-errors>
+          </mat-error>
         </mat-form-field>
 
         <mat-form-field >
           <input  #birthdayControl="ngModel" matInput type="text"  placeholder="birthday"
                   [(ngModel)]="human.attributes.birthday" required   name="birthday" >
+          <mat-error *ngIf="birthdayControl.errors">
+            <show-errors [control]="birthdayControl"></show-errors>
+          </mat-error>
         </mat-form-field>
       </div>
       <div class="form-submit">

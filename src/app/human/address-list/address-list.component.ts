@@ -3,7 +3,7 @@ import { HumanService } from '../../_services/human.service';
 import { ToastrService } from 'ngx-toastr';
 import { Human } from "../human.interface";
 import * as _ from 'lodash';
-import { PageEvent } from '@angular/material';
+
 
 @Component({
   selector: 'address-list',
@@ -20,7 +20,6 @@ export class AddressListComponent implements OnInit {
   public pageSizeOptions = [5, 7, 10, 25, 100];
   public pagedItems: any[];
   public currentPage: number = 1;
-  public pageEvent: PageEvent;
 
   constructor (private humanService: HumanService, private notificationService: ToastrService) { }
 

@@ -21,6 +21,7 @@ import { AddressDetailResolver } from "./_services/address-detail-resolver.servi
 import { AddressRouteActivator } from "./_services/address-route-activator.service"
 import { AddressDetailComponent } from "./human/address-detail/address-detail.component"
 import { AddressStartComponent } from "./human/address-start.component";
+import { ShowErrorComponent } from "./validate/show-error.component";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AddressStartComponent } from "./human/address-start.component";
     PushRecordComponent,
     Error404Component,
     AddressDetailComponent,
-    AddressStartComponent
+    AddressStartComponent,
+    ShowErrorComponent
   ],
   imports: [
     BrowserModule,
