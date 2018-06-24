@@ -1,11 +1,10 @@
-<mat-toolbar color="primary">
+<mat-toolbar class="app-toolbar" color="primary">
   <mat-toolbar-row>
     <span>Address Book</span>
-
     <span class="example-spacer"></span>
       <button [routerLink]="['/address']" routerLinkActive="active"  mat-button>List</button>
       <button [routerLink]="['/push-record']" routerLinkActive="active"    mat-button>Push Record</button>
   </mat-toolbar-row>
 </mat-toolbar>
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 

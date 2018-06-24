@@ -1,6 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~ngx-toastr/toastr.css";
 
-body { margin: 0; }
+
+html {
+  height: 100%
+}
+body {
+  margin: 0;
+  height: 100%;
+  overflow-y: hidden;
+
+}
 
 .example-icon {
   padding: 0 14px;
@@ -12,4 +22,32 @@ body { margin: 0; }
 
 .active {
   background-color: blueviolet;
+}
+
+.address-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 4em;
+}
+
+.address-list {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.address-router-outlet {
+  flex: 1;
+}
+
+.app-toolbar {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+.address-paginator {
+  position: fixed;
+  bottom: 0;
 }
